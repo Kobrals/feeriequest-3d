@@ -1,24 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>FéerieQuest 3D</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FéerieQuest 3D — Monde féerique</title>
+  <link rel="stylesheet" href="/style.css">
+  <!-- Three.js + loaders -->
+  <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/three@0.158.0/examples/js/controls/PointerLockControls.js"></script>
+  <script src="https://unpkg.com/three@0.158.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
 </head>
 <body>
-  <div id="loginScreen">
-    <h1>FéerieQuest</h1>
-    <input id="username" placeholder="Nom d'utilisateur">
-    <input id="password" type="password" placeholder="Mot de passe">
-    <button id="registerBtn">Créer un compte</button>
-    <button id="loginBtn">Connexion</button>
-    <p id="status"></p>
+  <div id="overlay">
+    <div id="hudTop">
+      <div id="playerName">Invité</div>
+      <div id="stats">Niv: <span id="lvl">1</span> | HP: <span id="hp">100</span>/<span id="maxhp">100</span> | Or: <span id="gold">0</span></div>
+      <div id="controlsHint">WASD — souris — Shift courir — E interagir — Space sauter</div>
+    </div>
+
+    <div id="leftPanel">
+      <h3>Quêtes</h3>
+      <div id="quests"></div>
+      <h3>Inventaire</h3>
+      <div id="inventory"></div>
+    </div>
+
+    <div id="rightPanel">
+      <h3>Journal</h3>
+      <div id="log"></div>
+      <button id="saveBtn">Sauvegarder</button>
+    </div>
+
+    <div id="authBox">
+      <input id="u" placeholder="Pseudo">
+      <input id="p" placeholder="Mot de passe" type="password">
+      <button id="btnRegister">Inscription</button>
+      <button id="btnLogin">Connexion</button>
+      <button id="btnGuest">Jouer invité</button>
+    </div>
   </div>
 
-  <canvas id="gameCanvas"></canvas>
+  <canvas id="c"></canvas>
 
-  <script src="https://cdn.socket.io/4.7.0/socket.io.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
-  <script src="client.js"></script>
+  <script src="/client.js"></script>
 </body>
 </html>

@@ -1,24 +1,15 @@
-body {
-  margin: 0;
-  overflow: hidden;
-  background: #000;
-  color: white;
-  font-family: Arial, sans-serif;
-}
-
-#loginScreen {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  background: rgba(0,0,0,0.6);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-#gameCanvas {
-  width: 100vw;
-  height: 100vh;
-  display: none;
-}
+html,body{height:100%;margin:0;overflow:hidden;font-family:system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(#071322,#0b2430);}
+#c{position:fixed;inset:0;display:block;width:100%;height:100%;}
+#overlay{position:fixed;inset:10px;pointer-events:none;}
+#hudTop{display:flex;justify-content:space-between;align-items:center;padding:8px;background:rgba(255,255,255,0.03);border-radius:8px;color:#eafaf2;pointer-events:auto;}
+#playerName{font-weight:700;}
+#leftPanel,#rightPanel{position:fixed;top:88px;width:260px;background:rgba(0,0,0,0.25);padding:10px;border-radius:8px;color:#eafaf2;pointer-events:auto;max-height:65vh;overflow:auto;}
+#leftPanel{left:10px;}
+#rightPanel{right:10px;}
+#log{max-height:260px;overflow:auto;}
+#inventory .item{padding:6px;border-bottom:1px solid rgba(255,255,255,0.03);}
+#quests .quest{padding:6px;border-bottom:1px dashed rgba(255,255,255,0.04);}
+#authBox{position:fixed;bottom:12px;left:12px;background:rgba(0,0,0,0.4);padding:8px;border-radius:8px;pointer-events:auto;}
+#authBox input{padding:6px;margin-right:6px;}
+#authBox button{padding:6px;margin-right:4px;}
+#saveBtn{margin-top:6px;padding:6px;}
