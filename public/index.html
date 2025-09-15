@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>FéerieQuest 3D</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loginScreen">
+    <h1>FéerieQuest</h1>
+    <input id="username" placeholder="Nom d'utilisateur">
+    <input id="password" type="password" placeholder="Mot de passe">
+    <button id="registerBtn">Créer un compte</button>
+    <button id="loginBtn">Connexion</button>
+    <p id="status"></p>
+  </div>
+
+  <canvas id="gameCanvas"></canvas>
+
+  <script src="https://cdn.socket.io/4.7.0/socket.io.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>

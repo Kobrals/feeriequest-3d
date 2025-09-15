@@ -1,6 +1,7 @@
 {
   "name": "feeriequest",
   "version": "1.0.0",
+  "description": "Base de jeu 3D multijoueur en ligne avec sauvegarde MongoDB",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -8,6 +9,9 @@
   "dependencies": {
     "express": "^4.18.2",
     "socket.io": "^4.7.0",
-    "mongoose": "^7.5.0"
+    "mongoose": "^7.6.0",
+    "bcrypt": "^5.1.0",
+    "jsonwebtoken": "^9.0.2"
   }
 }
+
